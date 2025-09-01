@@ -1,0 +1,403 @@
+/* --- TEMA MODERNO & ENERGÉTICO --- */
+
+/* --- Reset Básico e Padrões Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Nova fonte */
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-light);
+    color: var(--dark-slate);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1,
+h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* --- Nova Paleta de Cores --- */
+:root {
+    --primary-blue: #004a99;
+    --primary-red: #d93025;
+    --light-gray: #ffffff;
+    --dark-text: #2c3e50;
+}
+
+/* --- Header / Navegação --- */
+header {
+    background: var(--light-gray);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.logo h1 {
+    color: var(--primary-red);
+    margin-bottom: 0;
+    font-size: 1.8em;
+    text-shadow: #333;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+}
+
+nav .menu li {
+    margin-left: 30px;
+}
+
+nav .menu li a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 700;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+nav .menu li a:hover {
+    color: var(--primary-red);
+    border-bottom: 2px solid var(--primary-red);
+}
+
+/* --- Seção Hero --- */
+.hero {
+    /* Overlay com a nova cor */
+    background-image: linear-gradient(rgba(184, 16, 72, 0.8), rgba(38, 22, 31, 0.8)), url('https://external-preview.redd.it/Hj-BYG-A9_6b4mP26Y8HpUQZcxzltbe2fEOuE87VsbU.jpg?width=1080&crop=smart&auto=webp&s=c86caf0826a8f3993f3af4d16d185e1145a56a37');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 20px;
+    width:;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--white);
+    /* Texto branco para contraste */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta {
+    background-color: var(--accent-teal);
+    color: var(--white);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    /* Botão arredondado */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 199, 177, 0.4);
+}
+
+.cta:hover {
+    background-color: #00ab98;
+    transform: translateY(-3px);
+    /* Efeito de elevação */
+    box-shadow: 0 6px 20px rgba(0, 199, 177, 0.5);
+}
+
+/* --- Estilo Padrão para Seções --- */
+section {
+    padding: 60px 0;
+}
+
+section:nth-of-type(even) {
+    background-color: var(--white);
+}
+
+section h2 {
+    text-align: center;
+    color: var(--dark-slate);
+    font-size: 2.2em;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-teal);
+    border-radius: 2px;
+}
+
+/* --- Seções Específicas (Método, Horários, Estrutura) --- */
+#metodo .container p,
+#horarios .container p,
+#estrutura .container ul {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+#horarios ul,
+#estrutura ul {
+    list-style: none;
+    padding: 0;
+}
+
+#horarios ul li,
+#estrutura ul li {
+    background: var(--white);
+    margin: 10px auto;
+    padding: 20px;
+    border-left: 5px solid var(--accent-teal);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    /* Cantos arredondados */
+}
+
+/* --- Depoimentos --- */
+#depoimentos .container {
+    max-width: 800px;
+}
+
+#depoimentos blockquote {
+    background: var(--white);
+    border-left: 5px solid var(--accent-teal);
+    margin: 20px 0;
+    padding: 20px 20px 20px 30px;
+    border-radius: 8px;
+    /* Cantos arredondados */
+    font-style: italic;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+#depoimentos blockquote footer {
+    margin-top: 10px;
+    font-weight: 700;
+    color: var(--dark-slate);
+    text-align: right;
+    font-style: normal;
+}
+
+/* --- Contato --- */
+#contato a {
+    color: var(--accent-teal);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* Cantos arredondados */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--accent-teal);
+    box-shadow: 0 0 0 3px rgba(0, 199, 177, 0.2);
+}
+
+form button {
+    background-color: var(--dark-slate);
+    color: var(--white);
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    /* Botão arredondado */
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #34495e;
+    /* Um pouco mais claro que o dark-slate */
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--dark-slate);
+    color: var(--white);
+    text-align: center;
+    padding: 30px;
+}
+
+/* --- CSS Adicional para Interatividade (Cores e Estilos Atualizados) --- */
+.menu-toggle .bar {
+    background-color: var(--dark-slate);
+}
+
+header.scrolled {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.back-to-top {
+    background-color: var(--accent-teal);
+}
+
+.back-to-top:hover {
+    background-color: #00ab98;
+}
+
+/* Estilos da Galeria (se aplicável) */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.galeria-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.galeria-item .legenda {
+    padding: 15px;
+    font-weight: bold;
+    color: var(--dark-text);
+}
+
+
+/* --- Responsividade (Ajustes finos, a estrutura principal se mantém) --- */
+@media (max-width: 768px) {
+
+    /* Mantém as regras estruturais, as mudanças de cor já são aplicadas */
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--background-light);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s ease-in-out;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .menu.active {
+        right: 0;
+    }
+
+    nav .menu li {
+        margin: 20px 0;
+    }
+
+    nav .menu li a {
+        font-size: 1.2em;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5em;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+}
