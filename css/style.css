@@ -46,13 +46,22 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    /* padding: 15px 5%; */  /* Linha antiga */
+    padding: 15px 20px;   /* ✨ Nova linha */
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
 .logo h1 {
-    color: var(--primary-blue);
+    color: var(--primary-red);
     margin-bottom: 0;
     font-size: 1.8em;
+    text-shadow: #333;
 }
 
 nav .menu {
