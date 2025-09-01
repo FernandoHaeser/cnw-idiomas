@@ -1,0 +1,409 @@
+/* --- Reset Básico e Padrões Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1, h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* --- Cores Principais --- */
+:root {
+    --primary-blue: #004a99;
+    --primary-red: #d93025;
+    --light-gray: #ffffff;
+    --dark-text: #2c3e50;
+}
+
+/* --- Header / Navegação --- */
+header {
+    background: var(--light-gray);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+.logo h1 {
+    color: var(--primary-blue);
+    margin-bottom: 0;
+    font-size: 1.8em;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+}
+
+nav .menu li {
+    margin-left: 30px;
+}
+
+nav .menu li a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 700;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+nav .menu li a:hover {
+    color: var(--primary-red);
+    border-bottom: 2px solid var(--primary-red);
+}
+
+/* --- Seção Hero --- */
+.hero {
+    background-image: linear-gradient(rgba(0, 74, 153, 0.8), rgba(0, 74, 153, 0.8)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-gray);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta {
+    background-color: var(--primary-red);
+    color: var(--light-gray);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #a5251c;
+}
+
+/* --- Estilo Padrão para Seções --- */
+section {
+    padding: 60px 0;
+}
+
+section:nth-of-type(even) {
+    background-color: var(--light-gray);
+}
+
+section h2 {
+    text-align: center;
+    color: var(--primary-blue);
+    font-size: 2.2em;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-red);
+}
+
+/* --- Seções Específicas (Método, Horários, Estrutura) --- */
+#metodo .container p,
+#horarios .container p,
+#estrutura .container ul {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+#horarios ul, #estrutura ul {
+    list-style: none;
+    padding: 0;
+}
+
+#horarios ul li, #estrutura ul li {
+    background: var(--light-gray);
+    margin: 10px auto;
+    padding: 15px;
+    border-left: 5px solid var(--primary-blue);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* --- Depoimentos --- */
+#depoimentos .container {
+    max-width: 800px;
+}
+
+#depoimentos blockquote {
+    background: var(--light-gray);
+    border-left: 5px solid var(--primary-red);
+    margin: 20px 0;
+    padding: 20px 20px 20px 30px;
+    border-radius: 5px;
+    font-style: italic;
+    position: relative;
+}
+
+#depoimentos blockquote::before {
+    content: '“';
+    font-size: 4em;
+    color: var(--primary-blue);
+    opacity: 0.1;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+}
+
+#depoimentos blockquote footer {
+    margin-top: 10px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    text-align: right;
+    font-style: normal;
+}
+
+/* --- Contato --- */
+#contato p {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+#contato a {
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contato a:hover {
+    text-decoration: underline;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: var(--dark-text);
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+form button {
+    background-color: var(--primary-blue);
+    color: var(--light-gray);
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #003366;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-blue);
+    color: var(--light-gray);
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* --- CSS Adicional para Interatividade --- */
+
+/* Estilos do Menu Hambúrguer */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-blue);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Header com Fundo ao Rolar */
+header.scrolled {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Animação de Surgimento (Scroll Reveal) */
+.reveal {
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Botão Voltar ao Topo */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-red);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 40px;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, background-color 0.3s;
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #a5251c;
+}
+
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #f4f7f6;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s ease-in-out;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    }
+    
+    nav .menu.active {
+        right: 0;
+    }
+
+    nav .menu li {
+        margin: 20px 0;
+    }
+    
+    nav .menu li a {
+        font-size: 1.2em;
+    }
+    
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5em;
+    }
+    
+    .hero {
+        padding: 60px 15px;
+    }
+    
+    .hero h2 {
+        font-size: 1.8em;
+    }
+    
+    .hero p {
+        font-size: 1em;
+    }
+}

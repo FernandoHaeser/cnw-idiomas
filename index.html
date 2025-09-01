@@ -1,11 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CNW Idiomas | Home</title>
+    <meta name="description" content="CNW Idiomas - Aprenda inglês de forma prática e divertida, com aulas presenciais e metodologia inovadora.">
+    <title>CNW Idiomas</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header></header>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>CNW Idiomas</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="menu">
+                <li><a href="#metodo">Método</a></li>
+                <li><a href="#horarios">Horários</a></li>
+                <li><a href="#estrutura">Estrutura</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <h2>Se você tem um sonho e muita vontade de falar inglês, o lugar é aqui!</h2>
+            <p>Aprenda inglês de forma prática e descontraída, destravando sua fala rapidamente.</p>
+            <a href="#contato" class="cta">Reserve sua matrícula</a>
+        </section>
+    </header>
+
+    <section id="metodo">
+        <div class="container">
+            <h2>Nosso Método</h2>
+            <p>Oferecemos uma metodologia prática e dinâmica, que foca em desenvolver a conversação desde o primeiro dia, com atenção individual e acompanhamento personalizado.</p>
+        </div>
+    </section>
+
+    <section id="horarios">
+        <div class="container">
+            <h2>Horários e Modalidades</h2>
+            <ul>
+                <li>Manhã: 08h às 12h</li>
+                <li>Tarde: 13h às 17h</li>
+                <li>Noite: 18h às 22h</li>
+            </ul>
+            <p>Modalidade presencial, com turmas reduzidas para melhor aproveitamento.</p>
+        </div>
+    </section>
+
+    <section id="estrutura">
+        <div class="container">
+            <h2>Nossa Estrutura</h2>
+            <ul>
+                <li>Salas climatizadas e confortáveis</li>
+                <li>Distanciamento social e protocolos de higiene</li>
+                <li>Local seguro e de fácil acesso</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="depoimentos">
+        <div class="container">
+            <h2>Depoimentos de Alunos</h2>
+            <blockquote>
+                "Aprender inglês nunca foi tão fácil e divertido! Recomendo a CNW para todos."
+                <footer>- Ana P.</footer>
+            </blockquote>
+            <blockquote>
+                "Metodologia prática e professores super atenciosos!"
+                <footer>- Carlos M.</footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+            <p>WhatsApp: <a href="https://wa.me/5511999999999" target="_blank">Clique aqui</a></p>
+            <form action="#" method="post">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 CNW Idiomas. Todos os direitos reservados.</p>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Voltar ao topo">↑</a>
+
+    <script src="scripts.js"></script>
+
 </body>
 </html>
