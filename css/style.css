@@ -91,6 +91,8 @@ nav .menu li a:hover {
 .hero h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    color: red;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero p {
@@ -380,10 +382,12 @@ header.scrolled {
     }
 
     .hero h2 {
+        color: #a5251c;
         font-size: 2em;
     }
 
     section h2 {
+        color: red;
         font-size: 1.8em;
     }
 
